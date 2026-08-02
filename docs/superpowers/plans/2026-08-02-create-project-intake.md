@@ -26,5 +26,5 @@ Verify that the agent collects missing context, preserves existing artifacts, an
 - [x] **Step 4: Validate the skill file**
 Run: `node -e "const fs=require('fs'); const s=fs.readFileSync('plugins/specbox/skills/create/SKILL.md','utf8'); if (!/^---\\nname: create\\ndescription: Use when/.test(s) || !s.includes('.spec-box-meta.yml') || !s.includes('specs/')) process.exit(1)"`
 Expected: exit code 0.
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 Run: `git add plugins/specbox/skills/create/SKILL.md docs/superpowers/plans/2026-08-02-create-project-intake.md && git commit -m "feat: initialize SpecBox project artifacts"`

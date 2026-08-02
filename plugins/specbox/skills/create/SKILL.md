@@ -38,9 +38,10 @@ installed SpecBox format:
 1. `.tms.json` with only the minimum confirmed configuration. Never overwrite
    unknown keys or unrelated changes in an existing file.
 2. `.spec-box-meta.yml`. For a flat layout, create only the minimum required
-   metadata. For a hierarchy, define the selected grouping `attributes` and a
-   corresponding `trees` entry in this file; do not create a separate tree
-   file.
+   metadata and include neither `attributes` nor `trees`. Create those keys
+   only after the user selects a hierarchy; then define the selected grouping
+   `attributes` and a corresponding `trees` entry in this file. Do not create
+   a separate tree file.
 3. `specs/`.
 4. The first YAML specification in `specs/`, containing only the project
    description. Do not add `assert` or `propose` entries.
