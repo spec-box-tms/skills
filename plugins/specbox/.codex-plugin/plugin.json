@@ -1,9 +1,11 @@
 {
   "name": "specbox",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Skills for managing SpecBoxTMS requirements alongside application code.",
   "author": { "name": "SpecBoxTMS" },
   "skills": "./skills/",
+  "composerIcon": "./assets/icon.jpg",
+  "logo": "./assets/icon.jpg",
   "interface": {
     "displayName": "SpecBoxTMS",
     "shortDescription": "Manage SpecBoxTMS requirements",
