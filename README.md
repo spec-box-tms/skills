@@ -27,45 +27,30 @@
 
 ## Установка
 
-Нужен Codex CLI. Плагин устанавливается из personal marketplace.
+Нужен Codex CLI. Плагин устанавливается напрямую из GitHub marketplace.
 
-1. Поместите этот каталог в `~/plugins/specbox`:
-
-   ```sh
-   mkdir -p ~/plugins
-   cp -R /path/to/spec-box-tms/skill ~/plugins/specbox
-   ```
-
-2. Если файла `~/.agents/plugins/marketplace.json` ещё нет, создайте его:
-
-   ```json
-   {
-     "name": "personal",
-     "interface": { "displayName": "Personal" },
-     "plugins": [
-       {
-         "name": "specbox",
-         "source": { "source": "local", "path": "./plugins/specbox" },
-         "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
-         "category": "Productivity"
-       }
-     ]
-   }
-   ```
-
-   Если файл уже есть, сохраните его содержимое и добавьте в массив `plugins`
-   только объект `specbox` из примера. Запомните значение поля `name`.
-
-3. Установите плагин и откройте новый task:
+1. Добавьте marketplace:
 
    ```sh
-   codex plugin add specbox@personal
+   codex plugin marketplace add sr480/skills --ref main
+   ```
+
+2. Установите плагин и откройте новый task:
+
+   ```sh
+   codex plugin add specbox@specbox-tms
    codex plugin list
    ```
 
-   Если marketplace называется не `personal`, подставьте его значение вместо
-   `personal`. В новом task будут доступны `specbox:create`,
+   В новом task будут доступны `specbox:create`,
    `specbox:extract` и остальные skills.
+
+Для обновления marketplace после нового коммита:
+
+```sh
+codex plugin marketplace upgrade specbox-tms
+codex plugin add specbox@specbox-tms
+```
 
 Плагин не задаёт имена YAML-файлов, структуру каталогов или тестовый раннер.
 
