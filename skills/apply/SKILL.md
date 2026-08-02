@@ -3,19 +3,18 @@ name: apply
 description: Use when implementing a selected SpecBoxTMS propose requirement and converting it to assert after the behavior exists.
 ---
 
-# Реализация предложения
+# Applying a Proposal
 
-1. Выбери точный `propose` и до изменений прочитай требование, затронутый код,
-   все его вызовы, существующие тесты и YAML-соглашения.
-2. Реализуй только описанное поведение минимальным изменением. Добавь или
-   обнови тесты, когда они уместны для стека и поведения; используй текущий
-   раннер и настройки `.tms.json`.
-3. Преобразуй выбранную запись в `assert` только после того, как поведение
-   фактически появилось в приложении. Отсутствие теста или неуспешная
-   валидация не является причиной оставлять реализованное поведение
-   `propose` или откатывать статус.
-4. Запусти относящиеся тесты и штатную валидацию SpecBox. Сообщи результаты
-   тестов, валидации и преобразования статуса отдельными строками.
+1. Select the exact `propose`; before editing, read the requirement, affected
+   code, all its callers, existing tests, and YAML conventions.
+2. Implement only the stated behavior with the smallest change. Add or update
+   tests when appropriate for the stack and behavior; use the existing runner
+   and `.tms.json` configuration.
+3. Convert the selected entry to `assert` only after the behavior actually
+   exists in the application. A missing test or failed validation is not a
+   reason to retain implemented behavior as `propose` or revert its status.
+4. Run the relevant tests and standard SpecBox validation. Report test,
+   validation, and status-conversion results on separate lines.
 
-Не трогай другие предложения, не меняй платформу SpecBoxTMS и не перезаписывай
-несвязанные пользовательские изменения.
+Do not change other proposals, the SpecBoxTMS platform, or unrelated user
+changes.

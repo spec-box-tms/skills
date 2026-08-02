@@ -3,16 +3,16 @@ name: write-tests
 description: Use when adding or updating tests for implemented SpecBoxTMS assert requirements in an existing project test stack.
 ---
 
-# Тесты для реализованных требований
+# Writing Tests for Implemented Requirements
 
-1. Выбери конкретный `assert`. Прочитай `.tms.json`, соседние тесты и команды
-   проекта, чтобы понять настроенное сопоставление Jest или JUnit.
-2. Используй существующий раннер и его стиль; новый фреймворк не добавляй.
-   Сначала создай тест, который падает из-за отсутствующего поведения, затем
-   внеси минимальную реализацию и запусти целевой тест.
-3. Свяжи идентификатор теста с `assert` ровно так, как настроено в `.tms.json`.
-   Проверяй наблюдаемое поведение, а не текст спецификации или мок.
-4. Отчитайся отдельно о выполненных тестах и о `specbox:validate`.
+1. Select one `assert`. Read `.tms.json`, nearby tests, and project commands
+   to understand the configured Jest or JUnit mapping.
+2. Use the existing runner and its style; do not add a framework. First write
+   a test that fails because the behavior is absent, then make the smallest
+   implementation change and run the targeted test.
+3. Link the test identifier to `assert` exactly as `.tms.json` configures it.
+   Test observable behavior, not specification text or a mock.
+4. Report test execution and `specbox:validate` separately.
 
-Не меняй статус требования из-за отсутствия или падения теста: `assert` — это
-реализованное поведение, а покрытие — независимая характеристика.
+Do not change a requirement's status because a test is missing or failing:
+`assert` is implemented behavior and coverage is independent.

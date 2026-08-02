@@ -3,21 +3,20 @@ name: extract
 description: Use when deriving SpecBoxTMS requirements from existing application code and tests without inventing planned behavior.
 ---
 
-# Извлечение реализованных требований
+# Extracting Implemented Requirements
 
-Извлекай только подтверждённое поведением приложения. Наличие теста усиливает
-доказательство, но его отсутствие не означает, что поведения нет.
+Extract only behavior confirmed by the application. A test strengthens the
+evidence, but its absence does not mean the behavior is absent.
 
-1. До записи изучи затронутый код, вызовы, тесты, существующие YAML и их
-   размещение. Зафиксируй источник каждого вывода.
-2. Описывай реализованное поведение как `assert` в существующем формате YAML.
-   Желаемое, предполагаемое или частично понятное поведение не записывай.
-3. Выбери frontend- или backend-файл только по архитектурному контексту и
-   локальным соглашениям. Не создавай суффиксы, каталоги или поля. Если слой
-   нельзя установить надёжно, запроси решение пользователя.
-4. Сохрани стиль, коды и связи существующего файла; не перезаписывай
-   несвязанные требования.
+1. Before writing, inspect affected code, callers, tests, existing YAML, and
+   its placement. Record the source for every conclusion.
+2. Describe implemented behavior as `assert` in the existing YAML format. Do
+   not write desired, assumed, or only partially understood behavior.
+3. Choose a frontend or backend file only from architectural context and local
+   conventions. Do not create suffixes, directories, or fields. If the layer
+   cannot be determined reliably, ask the user to decide.
+4. Preserve the existing file's style, codes, and links; do not overwrite
+   unrelated requirements.
 
-В результате перечисли добавленные `assert`, их доказательства, изменённые
-файлы и неразрешённые границы. Для предположений предложи отдельный вызов
-`specbox:propose`.
+List the added `assert` entries, their evidence, changed files, and unresolved
+boundaries. For assumptions, offer a separate `specbox:propose` invocation.

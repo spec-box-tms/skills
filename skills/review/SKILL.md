@@ -3,19 +3,19 @@ name: review
 description: Use when performing a read-only quality review of selected SpecBoxTMS requirement files or entries.
 ---
 
-# Ревью требований
+# Reviewing Requirements
 
-Работай только на чтение: не редактируй YAML, конфигурацию или код.
+Work read-only: do not edit YAML, configuration, or code.
 
-Для каждого выбранного требования проверь полноту, корректность, реализуемость,
-необходимость, однозначность и проверяемость. Приоритетность проверяй, только
-если проект уже умеет её выражать. Для набора требований проверь полноту,
-непротиворечивость, изменяемость и трассируемость.
+For every selected requirement, check completeness, correctness, feasibility,
+necessity, unambiguity, and verifiability. Check priority only if the project
+already has a way to express it. For a requirements set, check completeness,
+consistency, modifiability, and traceability.
 
-Каждое замечание выводи в форме:
+Write every finding as:
 
-`<код или расположение> — <критерий Вигерса>: <объяснение>. Минимум: <рекомендация>.`
+`<code or location> — <Wiegers criterion>: <explanation>. Minimum: <recommendation>.`
 
-Не добавляй новые поля ради формального соответствия модели и не называй
-отсутствие автотеста структурной ошибкой. Если замечаний нет, явно сообщи
-область ревью и проверенные критерии.
+Do not add fields merely to satisfy the model formally, and do not call a
+missing automated test a structural error. If there are no findings, state the
+review scope and criteria checked explicitly.

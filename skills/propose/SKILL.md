@@ -3,22 +3,23 @@ name: propose
 description: Use when turning a requested change into planned SpecBoxTMS propose requirements without changing application code.
 ---
 
-# Предложение изменения
+# Proposing a Change
 
-До записи изучи запрос, затронутые код и YAML, расположение тестов и локальные
-соглашения. Отделяй frontend от backend только по подтверждённым
-архитектурным границам; если граница неясна, задай пользователю один вопрос и
-не угадывай файл.
+Before writing, inspect the request, affected code and YAML, test placement,
+and local conventions. Separate frontend from backend only by confirmed
+architectural boundaries; if the boundary is unclear, ask the user one
+question and do not guess the file.
 
-Записывай планируемое поведение как `propose` в том же YAML-формате и стиле,
-что `assert`. Не добавляй новые метаданные, имена файлов или каталоги. Перед
-записью проверь каждую запись на полноту, корректность, реализуемость,
-необходимость, однозначность и проверяемость; существующий механизм
-приоритетов используй только если он уже есть.
+Write planned behavior as `propose` in the same YAML format and style as
+`assert`. Do not add metadata, file names, or directories. Before writing,
+check every entry for completeness, correctness, feasibility, necessity,
+unambiguity, and verifiability; use an existing priority mechanism only when
+one already exists.
 
-Допустимо менять только выбранные YAML. Не меняй приложение, тесты или статус
-других требований. Если версия SpecBoxTMS не поддерживает `propose`, сообщи
-это как внешний блокер, не реализуя поддержку платформы в этом репозитории.
+Only the selected YAML may be changed. Do not change the application, tests,
+or other requirement statuses. If the SpecBoxTMS version does not support
+`propose`, report it as an external blocker rather than implementing platform
+support in this repository.
 
-В результате перечисли созданные предложения, файлы, источник решений и
-нерешённые вопросы.
+List the created proposals, files, sources for decisions, and unresolved
+questions.

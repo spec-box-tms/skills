@@ -3,30 +3,32 @@ name: create
 description: Use when initializing SpecBoxTMS in a new or existing project, or safely creating or amending its .tms.json configuration.
 ---
 
-# Подключение SpecBoxTMS
+# Connecting SpecBoxTMS
 
-## Что читать
+## Read First
 
-До записи изучи источник явной задачи, структуру и стек проекта, существующие
-спецификации, `.tms.json`, тесты и их команды. Сохрани принятые соглашения.
+Before writing, inspect the explicit task source, project structure and stack,
+existing specifications, `.tms.json`, tests, and their commands. Preserve
+established conventions.
 
-## Действия
+## Actions
 
-1. Определи из манифестов, скриптов, lockfile и локальной документации
-   совместимую с проектом команду SpecBox. Только после этого запускай нужную
-   команду вида `npx spec-box …`; аргументы не угадывай.
-2. Если `.tms.json` отсутствует, добавь только минимальную подтверждённую
-   конфигурацию. Если он существует, меняй лишь необходимое и понятное
-   дополнение; неизвестные ключи и несвязанные изменения не перезаписывай.
-3. При конфликте задачи с конфигурацией, неясной командой или небезопасном
-   изменении не пиши файл: сообщи расхождение и запроси решение пользователя.
-4. Не создавай YAML-требования и не добавляй метаданные без источника в задаче,
-   коде или явном решении пользователя.
+1. Determine the project-compatible SpecBox command from manifests, scripts,
+   lockfiles, and local documentation. Only then run the required `npx
+   spec-box …` command; never guess its arguments.
+2. If `.tms.json` is absent, add only the minimum confirmed configuration. If
+   it exists, change only the necessary, understood addition; do not overwrite
+   unknown keys or unrelated changes.
+3. If the task conflicts with the configuration, the command is unclear, or
+   the change is unsafe, do not write the file: report the discrepancy and ask
+   the user to decide.
+4. Do not create YAML requirements or metadata without a source in the task,
+   code, or an explicit user decision.
 
-## Границы и результат
+## Scope and Result
 
-Допустима запись только `.tms.json`, когда её можно безопасно создать или
-точечно дополнить. Не меняй исходный код, тесты и спецификации.
+Only write `.tms.json` when it can be safely created or amended precisely. Do
+not change application code, tests, or specifications.
 
-В отчёте укажи найденные соглашения и команду, созданные/изменённые ключи либо
-причину отсутствия записи, а также результат команды или блокер.
+Report the discovered conventions and command, created or changed keys (or why
+no write occurred), and the command result or blocker.
