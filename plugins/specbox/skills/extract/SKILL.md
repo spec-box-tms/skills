@@ -14,6 +14,7 @@ evidence, but its absence does not mean the behavior is absent.
    not write desired, assumed, or only partially understood behavior.
    For backend HTTP API behavior, first read
    `../../references/backend-http-api.md`.
+   For frontend behavior, first read `../../references/frontend.md`.
 3. Choose a frontend or backend file only from architectural context and local
    conventions. Do not create suffixes, directories, or fields. If the layer
    cannot be determined reliably, ask the user to decide.
