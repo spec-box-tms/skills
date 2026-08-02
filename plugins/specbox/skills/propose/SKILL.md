@@ -10,6 +10,9 @@ and local conventions. Separate frontend from backend only by confirmed
 architectural boundaries; if the boundary is unclear, ask the user one
 question and do not guess the file.
 
+For backend HTTP API behavior, first read
+`../../references/backend-http-api.md`.
+
 Write planned behavior as `propose` in the same YAML format and style as
 `assert`. Do not add metadata, file names, or directories. Before writing,
 check every entry for completeness, correctness, feasibility, necessity,

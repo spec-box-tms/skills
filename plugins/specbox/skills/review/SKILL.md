@@ -7,6 +7,9 @@ description: Use when performing a read-only quality review of selected SpecBoxT
 
 Work read-only: do not edit YAML, configuration, or code.
 
+For backend HTTP API requirements, first read
+`../../references/backend-http-api.md`.
+
 For every selected requirement, check completeness, correctness, feasibility,
 necessity, unambiguity, and verifiability. Check priority only if the project
 already has a way to express it. For a requirements set, check completeness,
