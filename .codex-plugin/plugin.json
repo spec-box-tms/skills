@@ -1,0 +1,20 @@
+{
+  "name": "specbox",
+  "version": "0.1.0",
+  "description": "Skills for managing SpecBoxTMS requirements alongside application code.",
+  "author": { "name": "SpecBoxTMS" },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "SpecBoxTMS",
+    "shortDescription": "Manage SpecBoxTMS requirements",
+    "longDescription": "Create, validate, review, propose, test, and implement SpecBoxTMS requirements.",
+    "developerName": "SpecBoxTMS",
+    "category": "Productivity",
+    "capabilities": ["Write"],
+    "defaultPrompt": [
+      "Initialize SpecBoxTMS in this project.",
+      "Review these SpecBoxTMS requirements.",
+      "Implement this SpecBoxTMS proposal."
+    ]
+  }
+}
