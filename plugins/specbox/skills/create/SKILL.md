@@ -7,7 +7,8 @@ description: Use when initializing SpecBoxTMS in a new or existing project, or s
 
 ## Start the Intake
 
-Open with exactly:
+The first user-facing response MUST be exactly this prompt; never replace it
+with a different follow-up question:
 
 > Хотите подробно описать проект или стек используемых технологий, уточнить правила кодирования требований?
 
@@ -35,16 +36,22 @@ lockfiles, and local documentation. Only then run the required `npx spec-box
 Create each missing artifact using the discovered project conventions and the
 installed SpecBox format:
 
-1. `.tms.json` with only the minimum confirmed configuration. Never overwrite
-   unknown keys or unrelated changes in an existing file.
+1. `.tms.json` with only the minimum confirmed configuration. If no project
+   configuration convention exists, point its YAML files at `specs/**/*.yml`.
+   Add test mappings only when confirmed. Never overwrite unknown keys or
+   unrelated changes in an existing file.
 2. `.spec-box-meta.yml`. For a flat layout, create only the minimum required
    metadata and include neither `attributes` nor `trees`. Create those keys
    only after the user selects a hierarchy; then define the selected grouping
    `attributes` and a corresponding `trees` entry in this file. Do not create
-   a separate tree file.
-3. `specs/`.
-4. The first YAML specification in `specs/`, containing only the project
-   description. Do not add `assert` or `propose` entries.
+   a separate tree file. Put hierarchy attributes and tree definitions
+   exclusively in `.spec-box-meta.yml`.
+3. `specs/`. If no existing convention names a specification directory, use
+   `specs/` exactly; do not create `requirements/` or another directory.
+4. The first YAML specification inside `specs/`, not metadata or taxonomy. It
+   may contain only the feature identity required by the format and the
+   collected project description. Never add `assert`, `propose`, requirement
+   groups, attributes, or trees.
 
 If a required format or command cannot be confirmed, do not guess or overwrite
 anything: report the discrepancy and ask the user to decide.
@@ -53,5 +60,5 @@ anything: report the discrepancy and ask the user to decide.
 
 Report the discovered conventions and command; the missing artifacts created
 or existing artifacts preserved; and confirmation that the initial
-specification contains only the project description with no `assert` or
-`propose` entries.
+specification contains only the feature identity and project description, with
+no `assert`, `propose`, requirement groups, attributes, or trees.
