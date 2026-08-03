@@ -7,18 +7,15 @@ description: Use when initializing SpecBoxTMS in a new or existing project, or s
 
 ## Start the Intake
 
-The first user-facing response MUST be exactly this prompt; never replace it
-with a different follow-up question:
+First extract project context from the user's request and the repository. Use
+the user's language and ask only for missing information that materially affects
+initialization; never repeat a question already answered by the request or
+project. Project name, description, stack, and requirement-coding rules may be
+derived from existing files when unambiguous.
 
-> Хотите подробно описать проект или стек используемых технологий, уточнить правила кодирования требований?
-
-Accept free-form project information. Ask follow-up questions only when the
-project name, project description, technology stack, or requirement-coding
-rules are missing. Do not ask for information already supplied.
-
-Offer a flat specification layout or a hierarchy. If the user chooses a
-hierarchy, ask for its title and grouping attributes; these are the only
-additional questions permitted for that choice.
+If organization is unspecified, offer a flat specification layout or a
+hierarchy. Use the minimal flat layout when the user leaves the choice to you.
+For a hierarchy, ask only for its title and grouping attributes.
 
 ## Read First
 

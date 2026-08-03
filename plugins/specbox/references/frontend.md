@@ -33,8 +33,10 @@ default.
 
 ## Apply this reference by skill
 
-- `specbox:extract` creates `assert` only for behavior evidenced by code,
-  tests, or existing specifications. Leave unsupported behavior unresolved.
+- `specbox:extract` creates `assert` only for behavior evidenced by reachable
+  application code, a passing behavioral test, or direct observation. Existing
+  specifications provide context and placement, not implementation evidence.
+  Leave unsupported behavior unresolved.
 - `specbox:propose` identifies missing product decisions with the applicable
   checklists, asks focused questions, and offers concise options before writing
   `propose`.

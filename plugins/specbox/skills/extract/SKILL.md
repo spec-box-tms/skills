@@ -9,9 +9,12 @@ Extract only behavior confirmed by the application. A test strengthens the
 evidence, but its absence does not mean the behavior is absent.
 
 1. Before writing, inspect affected code, callers, tests, existing YAML, and
-   its placement. Record the source for every conclusion.
+   its placement. Existing specifications provide context and placement, not
+   implementation evidence. Record the source for every conclusion.
 2. Describe implemented behavior as `assert` in the existing YAML format. Do
-   not write desired, assumed, or only partially understood behavior.
+   so only from reachable application code, a passing behavioral test, or
+   directly observed application behavior. Do not write desired, assumed, or
+   only partially understood behavior.
    For backend HTTP API behavior, first read
    `../../references/backend-http-api.md`.
    For frontend behavior, first read `../../references/frontend.md`.
@@ -22,4 +25,6 @@ evidence, but its absence does not mean the behavior is absent.
    unrelated requirements.
 
 List the added `assert` entries, their evidence, changed files, and unresolved
-boundaries. For assumptions, offer a separate `specbox:propose` invocation.
+boundaries. Report an existing `assert` that lacks implementation evidence and
+an implemented `propose` as status drift; do not duplicate or silently change
+either one. For assumptions, offer a separate `specbox:propose` invocation.

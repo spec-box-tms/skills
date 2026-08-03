@@ -1,18 +1,18 @@
 ---
 name: write-tests
-description: Use when adding or updating tests for implemented SpecBoxTMS assert requirements in an existing project test stack.
+description: Use when adding or updating tests for SpecBoxTMS assert requirements in an existing project test stack.
 ---
 
-# Writing Tests for Implemented Requirements
+# Writing Tests for Accepted Requirements
 
-1. Select one `assert`. Read `.tms.json`, nearby tests, and project commands
-   to understand the configured Jest or JUnit mapping.
-2. Use the existing runner and its style; do not add a framework. First write
-   a test that fails because the behavior is absent, then make the smallest
-   implementation change and run the targeted test.
-3. Link the test identifier to `assert` exactly as `.tms.json` configures it.
-   Test observable behavior, not specification text or a mock.
-4. Report test execution and `specbox:validate` separately.
-
-Do not change a requirement's status because a test is missing or failing:
-`assert` is implemented behavior and coverage is independent.
+1. Select one `assert`. Read `.tms.json`, nearby tests, project
+   commands, and [the frontend E2E reference](../../references/frontend-e2e-testing.md)
+   when the requirement is frontend.
+2. Use the existing runner and its style. For frontend work, follow the
+   reference; do not add a framework or implementation code in this skill.
+3. Link the test identifier exactly as `.tms.json` configures it and run the
+   targeted test. For an `assert` newly accepted from `propose`, verify that it
+   fails because behavior is absent (RED). For existing behavior, add regression
+   coverage and report whether the test passes; do not manufacture a failure.
+4. Report test execution and `specbox:validate` separately. Do not change
+   requirement status or implement application behavior in this skill.

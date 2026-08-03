@@ -20,10 +20,10 @@ check every entry for completeness, correctness, feasibility, necessity,
 unambiguity, and verifiability; use an existing priority mechanism only when
 one already exists.
 
-Only the selected YAML may be changed. Do not change the application, tests,
-or other requirement statuses. If the SpecBoxTMS version does not support
-`propose`, report it as an external blocker rather than implementing platform
-support in this repository.
+Change only the explicitly selected affected YAML files. Before writing, list
+those files and the behavior assigned to each; if any placement is ambiguous,
+ask the user rather than guessing. Do not change the application, tests,
+unrelated YAML, or other requirement statuses.
 
 List the created proposals, files, sources for decisions, and unresolved
 questions.

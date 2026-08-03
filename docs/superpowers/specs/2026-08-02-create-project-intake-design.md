@@ -1,15 +1,15 @@
 # Project intake for `specbox:create`
 
-`specbox:create` asks first: «Хотите подробно описать проект или стек
-используемых технологий, уточнить правила кодирования требований?» It then
-offers a flat specification layout or a hierarchy grouped by project-defined
-attributes.
+`specbox:create` first extracts project context from the request and repository,
+then asks only for information that materially affects initialization. It uses
+the user's language and never repeats a question already answered by the request
+or project.
 
-It accepts free-form project information. When that information leaves the
-project name, short description, technology stack, or requirement-coding rules
-unclear, it asks only the missing follow-up questions. For a hierarchy, it also
-asks for its name and grouping attributes, then defines them and a `trees`
-entry in `.spec-box-meta.yml`.
+If organization is unspecified, it offers a flat specification layout or a
+hierarchy grouped by project-defined attributes. It uses the minimal flat layout
+when the user delegates the choice. For a hierarchy, it asks for its name and
+grouping attributes, then defines them and a `trees` entry in
+`.spec-box-meta.yml`.
 
 It creates missing `.tms.json`, `.spec-box-meta.yml`, `specs/`, and an initial
 YAML specification. The initial specification records the project description

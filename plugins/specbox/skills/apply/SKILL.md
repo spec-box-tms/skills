@@ -1,20 +1,23 @@
 ---
 name: apply
-description: Use when implementing a selected SpecBoxTMS propose requirement and converting it to assert after the behavior exists.
+description: Use when accepting and implementing a selected SpecBoxTMS propose requirement.
 ---
 
 # Applying a Proposal
 
 1. Select the exact `propose`; before editing, read the requirement, affected
    code, all its callers, existing tests, and YAML conventions.
-2. Implement only the stated behavior with the smallest change. Add or update
-   tests when appropriate for the stack and behavior; use the existing runner
-   and `.tms.json` configuration.
-3. Convert the selected entry to `assert` only after the behavior actually
-   exists in the application. A missing test or failed validation is not a
-   reason to retain implemented behavior as `propose` or revert its status.
-4. Run the relevant tests and standard SpecBox validation. Report test,
-   validation, and status-conversion results on separate lines.
+2. Accept it by converting only that entry to `assert`. Do not create a
+   separate completion status.
+3. **REQUIRED SUB-SKILL:** Use `specbox:write-tests` to add the traceable test
+   first and run it. Continue only after confirming that it fails because the
+   stated behavior is absent (RED), not because of a setup or syntax error.
+4. Implement only the stated behavior with the smallest change, then run the
+   targeted test until it passes (GREEN). Do not revert the accepted `assert`
+   because a test or validation command fails; report the incomplete workflow.
+5. Run standard SpecBox validation. Report the status conversion, RED result,
+   implementation, GREEN result, and validation separately. The workflow is
+   completed only after GREEN; `completed` is not written to YAML.
 
 Do not change other proposals, the SpecBoxTMS platform, or unrelated user
 changes.

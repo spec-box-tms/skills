@@ -42,8 +42,9 @@ the request and evidence.
 
 ## Skill-specific use
 
-- `specbox:extract` creates only evidenced `assert` entries from code, tests,
-  and existing specifications.
+- `specbox:extract` creates `assert` only from reachable application code, a
+  passing behavioral test, or direct observation. Existing specifications are
+  context and placement, not implementation evidence.
 - `specbox:propose` uses the checklists to find missing product decisions and
   offers options before creating `propose` entries.
 - `specbox:review` is read-only. For each gap it identifies the feature and
