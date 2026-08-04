@@ -39,7 +39,7 @@ propose → assert → RED-test → implement → GREEN-test → completed
 1. Добавьте marketplace:
 
    ```sh
-   codex plugin marketplace add sr480/skills --ref main
+   codex plugin marketplace add spec-box-tms/skills --ref main
    ```
 
 2. Установите плагин и откройте новый task:
