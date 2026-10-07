@@ -15,9 +15,10 @@ description: Use when accepting and implementing a selected SpecBoxTMS propose r
 4. Implement only the stated behavior with the smallest change, then run the
    targeted test until it passes (GREEN). Do not revert the accepted `assert`
    because a test or validation command fails; report the incomplete workflow.
-5. Run standard SpecBox validation. Report the status conversion, RED result,
-   implementation, GREEN result, and validation separately. The workflow is
-   completed only after GREEN; `completed` is not written to YAML.
+5. Run standard SpecBox validation via `specbox:validate`. Report the status
+   conversion, RED result, implementation, GREEN result, and validation
+   separately. The workflow is completed only after GREEN; `completed` is not
+   written to YAML.
 
 Do not change other proposals, the SpecBoxTMS platform, or unrelated user
 changes.

@@ -11,8 +11,9 @@ architectural boundaries; if the boundary is unclear, ask the user one
 question and do not guess the file.
 
 For backend HTTP API behavior, first read
-`../../references/backend-http-api.md`.
-For frontend behavior, first read `../../references/frontend.md`.
+`{SKILL_DIR}/../../references/backend-http-api.md`.
+For frontend behavior, first read
+`{SKILL_DIR}/../../references/frontend.md`.
 
 Write planned behavior as `propose` in the same YAML format and style as
 `assert`. Do not add metadata, file names, or directories. Before writing,

@@ -5,9 +5,9 @@ description: Use when adding or updating tests for SpecBoxTMS assert requirement
 
 # Writing Tests for Accepted Requirements
 
-1. Select one `assert`. Read `.tms.json`, nearby tests, project
-   commands, and [the frontend E2E reference](../../references/frontend-e2e-testing.md)
-   when the requirement is frontend.
+1. Select one `assert`. Read `.tms.json`, nearby tests, project commands, and
+   the frontend E2E reference when the requirement is frontend:
+   `{SKILL_DIR}/../../references/frontend-e2e-testing.md`.
 2. Use the existing runner and its style. For frontend work, follow the
    reference; do not add a framework or implementation code in this skill.
 3. Link the test identifier exactly as `.tms.json` configures it and run the

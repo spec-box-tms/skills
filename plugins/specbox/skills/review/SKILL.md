@@ -8,8 +8,9 @@ description: Use when performing a read-only quality review of selected SpecBoxT
 Work read-only: do not edit YAML, configuration, or code.
 
 For backend HTTP API requirements, first read
-`../../references/backend-http-api.md`.
-For frontend requirements, first read `../../references/frontend.md`.
+`{SKILL_DIR}/../../references/backend-http-api.md`.
+For frontend requirements, first read
+`{SKILL_DIR}/../../references/frontend.md`.
 
 For every selected requirement, check completeness, correctness, feasibility,
 necessity, unambiguity, and verifiability. Check priority only if the project
